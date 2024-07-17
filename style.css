@@ -1,0 +1,289 @@
+* {
+    Margin: 0;
+    Padding: 0;
+    Font-family: “Josefin Sans”, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Netflix-Sans-Regular;
+
+}
+
+html,
+body {
+    height: 100%;
+    color: white;
+}
+
+@font-face {
+    font-family: Netflix-Sans-Regular;
+    src: url("contents/NetflixSans-Regular.otf");
+}
+
+@font-face {
+    font-family: Netflix-sans-Bold;
+    src: url("contents/NetflixSans-Bold.otf");
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* top Container ----------------------------------- */
+.container {
+    height: 512px;
+    Background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
+        url("contents/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container::before {
+    position: absolute;
+    top: 0px;
+    content: "";
+    width: 100%;
+    height: 512px;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.8) 100%)
+}
+
+
+
+/* navbar ---------------------------------------- */
+Nav {
+    Width: 100%;
+    Height: 80px;
+    Display: flex;
+    Justify-content: space-between;
+    Align-items: center;
+    position: absolute;
+    top: 0;
+    padding-inline: 20px;
+}
+
+.logo {
+    color: red;
+    /* margin-left: 20px; */
+    width: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.language {
+    margin-right: 10px;
+    padding: 4px 12px;
+    font-weight: 600;
+    background-color: rgba(17, 17, 17, 0.8);
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 4px;
+}
+
+.language i {
+    margin-right: 10px;
+}
+
+.language select {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: white;
+}
+
+.language select option {
+    background-color: black;
+}
+
+.sign-in {
+    margin-right: 10px;
+    background-color: rgb(223, 0, 0);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition-duration: 0.15s;
+}
+
+/* main text class ------ */
+.text1 {
+    font-family: Netflix-Sans-Bold;
+    font-size: 2rem;
+}
+
+.text2 {
+    font-family: Netflix-Sans-Regular;
+    font-size: 1.125rem;
+
+}
+
+/* container 1 content ------------------------- */
+
+
+.container-content {
+    text-align: center;
+    position: absolute;
+    width: 85%;
+    margin-top: 70px;
+}
+
+.c1-t2 {
+    margin-top: 16px;
+}
+
+.c1-t3 {
+    margin-top: 26px;
+    font-size: 1.125rem;
+}
+
+/* check from here----- */
+
+.email-div {
+    margin-top: 20px !important;
+    width: 100%;
+    max-width: 580px;
+    margin: auto;
+
+    row-gap: 15px;
+    display: grid;
+    place-items: center;
+    column-gap: 10px;
+    grid-template-columns: 65% 35%;
+
+}
+
+#email-input {
+    font-size: 1rem;
+    padding: 17px;
+    border-radius: 4px;
+    background-color: rgba(20, 20, 20, 0.606);
+    border: 1px solid rgb(99, 99, 99);
+    color: white;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#email-submit {
+    background-color: #e50914;
+    border-radius: 4px;
+    padding: 12px 24px;
+    color: white;
+    width: 100%;
+    white-space: nowrap;
+    user-select: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition-duration: 0.15s;
+
+}
+
+/* container2 ------------------------------------ */
+.container2 {
+    border-top: 8px solid #232323;
+    height: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+.c2-t1{
+    margin-top: 60px;
+}
+
+.c2-t2{
+    margin-top: 20px;
+}
+
+.c2-tv-div{
+background: url("contents/tv1.bmp");
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: 100%;
+}
+
+.c2-tv-div img{
+    width: 100%;
+}
+
+
+
+/* hover effects----------------------------------- */
+.sign-in:hover {
+    cursor: pointer;
+    background-color: rgb(193, 17, 25);
+}
+
+#email-input:focus {
+    outline: 2px solid white;
+    border: none;
+}
+
+#email-submit:hover {
+    cursor: pointer;
+    background-color: rgb(193, 17, 25);
+}
+
+/* media queries/responsiveness--------------------------- */
+
+@media (width<600px) {
+    .email-div {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #email-input {
+        padding: 13px 17px;
+    }
+
+    #email-submit {
+        width: 155px;
+        padding: 13px 10px;
+        font-size: 1.125rem;
+    }
+}
+
+@media (width>960px) {
+
+    .container,
+    .container::before {
+        Height: 100%;
+    }
+
+    nav {
+        margin: auto;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .language {
+        margin-right: 20px;
+    }
+
+    .text1 {
+        font-size: 3rem;
+    }
+
+    .text2 {
+        font-size: 1.5rem;
+    }
+    .c1-t1{
+        margin-top: 115px;
+    }
+}
+
+@media (width>1280px) {
+    nav {
+        width: 1070px;
+    }
+
+    .container-content {
+        width: 1025px;
+    }
+}
